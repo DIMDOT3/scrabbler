@@ -1,5 +1,6 @@
 import { Component, Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Word } from "./word";
 
 @Component({
   selector: "app-root",
@@ -11,7 +12,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class AppComponent {
   title = "Scrabbler";
-  wordsList = [];
+  wordsList: Word[] = [];
   apiUrl: string = "http://localhost:8080/word";
   score: number = 0;
 
@@ -21,12 +22,12 @@ export class AppComponent {
 
   onWordSubmitted(word: string) {
     if (word) {
-      this.http.get(`${this.apiUrl}?word=${word}`).subscribe(res => {
+      this.http.get(`${this.apiUrl}?word=${word}`).subscribe((res: Word) => {
         this.wordsList.push(res);
         this.score = this.getTotalScore();
       });
     } else {
-      this.http.get(this.apiUrl).subscribe(res => {
+      this.http.get(this.apiUrl).subscribe((res: Word) => {
         this.wordsList.push(res);
         this.score = this.getTotalScore();
       });
@@ -37,5 +38,10 @@ export class AppComponent {
     return this.wordsList.reduce(function(acc, nextVal) {
       return acc + nextVal.score;
     }, 0);
+  }
+
+  onWordRemoved(deletedWord: Word) {
+    this.wordsList = this.wordsList.filter(word => word.id !== deletedWord.id);
+    this.score = this.getTotalScore();
   }
 }

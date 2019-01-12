@@ -9,7 +9,11 @@
       <app-form (wordSubmitted)="onWordSubmitted($event)"></app-form>
     </div>
     <div class="col-md-8">
-      <app-words-list [wordsList]="wordsList" [score]="score"></app-words-list>
+      <app-words-list
+        [wordsList]="wordsList"
+        [score]="score"
+        (removeWord)="onWordRemoved($event)"
+      ></app-words-list>
     </div>
   </div>
 </div>

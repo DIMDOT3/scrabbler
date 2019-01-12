@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+
+import { Word } from "../word";
 
 @Component({
   selector: "app-words-list",
@@ -8,7 +10,12 @@ import { Component, OnInit, Input } from "@angular/core";
 export class WordsListComponent implements OnInit {
   @Input() wordsList: string[];
   @Input() score: number;
+  @Output() removeWord = new EventEmitter<Word>();
   constructor() {}
 
   ngOnInit() {}
+
+  handleRemoveWord(word: Word) {
+    this.removeWord.emit(word);
+  }
 }

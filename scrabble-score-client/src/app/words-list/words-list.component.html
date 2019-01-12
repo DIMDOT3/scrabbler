@@ -11,7 +11,7 @@
   <tbody>
     <tr *ngFor="let word of wordsList">
       <td>{{ word.word }}</td>
-      <td>{{ word.score }}</td>
+      <td>{{ word.score }} <span (click)="handleRemoveWord(word)">X</span></td>
     </tr>
   </tbody>
 </table>
