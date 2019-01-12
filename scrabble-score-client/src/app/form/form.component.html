@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()" #wordForm="ngForm">
+  <div class="form-group">
+    <label for="scrabble-word">Scabble Word</label>
+    <input
+      type="text"
+      class="form-control"
+      id="scrabble-word"
+      aria-describedby="emailHelp"
+      placeholder="Enter a word"
+      [(ngModel)]="word"
+      name="word"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

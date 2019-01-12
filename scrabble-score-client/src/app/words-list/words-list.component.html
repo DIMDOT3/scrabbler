@@ -1,0 +1,17 @@
+<h2>Words List</h2>
+<hr />
+
+<table class="table table-bordered table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Word</th>
+      <th scope="col">Score ({{ score }})</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let word of wordsList">
+      <td>{{ word.word }}</td>
+      <td>{{ word.score }}</td>
+    </tr>
+  </tbody>
+</table>
