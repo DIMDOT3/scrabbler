@@ -24,5 +24,6 @@ export class FormComponent implements OnInit {
 
   onSubmit() {
     this.wordSubmitted.emit(this.word);
+    this.word = "";
   }
 }

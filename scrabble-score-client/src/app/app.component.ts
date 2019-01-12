@@ -13,7 +13,7 @@ export class AppComponent {
   title = "Scrabbler";
   wordsList = [];
   apiUrl: string = "http://localhost:8080/word";
-  score: number = this.getTotalScore();
+  score: number = 0;
 
   constructor(private http: HttpClient) {}
 
@@ -23,19 +23,19 @@ export class AppComponent {
     if (word) {
       this.http.get(`${this.apiUrl}?word=${word}`).subscribe(res => {
         this.wordsList.push(res);
+        this.score = this.getTotalScore();
       });
     } else {
       this.http.get(this.apiUrl).subscribe(res => {
         this.wordsList.push(res);
+        this.score = this.getTotalScore();
       });
     }
   }
 
   getTotalScore() {
-    console.log(
-      this.wordsList.reduce(function(acc, nextVal) {
-        return acc + nextVal.val;
-      }, 0)
-    );
+    return this.wordsList.reduce(function(acc, nextVal) {
+      return acc + nextVal.score;
+    }, 0);
   }
 }
