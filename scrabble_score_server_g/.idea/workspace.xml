@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d75f8e04-b55c-43cb-b6eb-418f0f97a083" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/src/app/words-list/words-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/src/app/words-list/words-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileContent/fileContent.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-    </list>
+    <list default="true" id="d75f8e04-b55c-43cb-b6eb-418f0f97a083" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,9 +130,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="14" />
-    <option name="y" value="32" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
   </component>
@@ -206,15 +194,15 @@
       <updated>1546730340123</updated>
       <workItem from="1546730341729" duration="859000" />
       <workItem from="1546989288588" duration="2052000" />
-      <workItem from="1547765496534" duration="302000" />
+      <workItem from="1547765496534" duration="903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3213000" />
+    <option name="totallyTimeSpent" value="3814000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="947" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="947" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
