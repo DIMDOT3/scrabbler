@@ -1,15 +1,19 @@
-<form (ngSubmit)="onSubmit()" #wordForm="ngForm">
-  <div class="form-group">
-    <label for="scrabble-word">Scabble Word</label>
-    <input
-      type="text"
-      class="form-control"
-      id="scrabble-word"
-      placeholder="Enter a word"
-      [(ngModel)]="word"
-      name="word"
-      required
-    />
+<div class="card">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #wordForm="ngForm">
+      <div class="form-group">
+        <label for="scrabble-word">Scabble Word</label>
+        <input
+          type="text"
+          class="form-control"
+          id="scrabble-word"
+          placeholder="Enter a word"
+          [(ngModel)]="word"
+          name="word"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>

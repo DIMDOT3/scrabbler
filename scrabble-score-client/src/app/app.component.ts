@@ -1,5 +1,7 @@
 import { Component, Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { ConfirmationService } from "primeng/api";
+
 import { Word } from "./word";
 
 @Component({
@@ -16,7 +18,10 @@ export class AppComponent {
   apiUrl: string = "http://localhost:8080/word";
   score: number = 0;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private confirmationService: ConfirmationService
+  ) {}
 
   ngOnInit() {}
 
@@ -35,13 +40,18 @@ export class AppComponent {
   }
 
   getTotalScore() {
-    return this.wordsList.reduce(function(acc, nextVal) {
-      return acc + nextVal.score;
-    }, 0);
+    return this.wordsList.reduce((acc, nextVal) => acc + nextVal.score, 0);
   }
 
   onWordRemoved(deletedWord: Word) {
-    this.wordsList = this.wordsList.filter(word => word.id !== deletedWord.id);
-    this.score = this.getTotalScore();
+    this.confirmationService.confirm({
+      message: "Are you sure that you want to perform this action?",
+      accept: () => {
+        this.wordsList = this.wordsList.filter(
+          word => word.id !== deletedWord.id
+        );
+        this.score = this.getTotalScore();
+      }
+    });
   }
 }
