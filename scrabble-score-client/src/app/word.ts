@@ -1,5 +1,5 @@
 export class Word {
   id: number;
-  name: string;
+  word: string;
   score: number;
 }

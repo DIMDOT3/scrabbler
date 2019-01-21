@@ -32,10 +32,7 @@ export class AppComponent {
         this.score = this.getTotalScore();
       });
     } else {
-      this.http.get(this.apiUrl).subscribe((res: Word) => {
-        this.wordsList.push(res);
-        this.score = this.getTotalScore();
-      });
+      throw new Error("you must provide a word!");
     }
   }
 
@@ -45,7 +42,7 @@ export class AppComponent {
 
   onWordRemoved(deletedWord: Word) {
     this.confirmationService.confirm({
-      message: "Are you sure that you want to perform this action?",
+      message: `Are you sure that you want to remove "${deletedWord.word}"?`,
       accept: () => {
         this.wordsList = this.wordsList.filter(
           word => word.id !== deletedWord.id
