@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #wordForm="ngForm">
+      <div class="form-group">
+        <label for="player-form">Add a Player</label>
+        <input
+          type="text"
+          class="form-control"
+          id="player-form"
+          placeholder="Enter the player's name"
+          [(ngModel)]="player"
+          name="player"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-info">Add Player</button>
+    </form>
+  </div>
+</div>

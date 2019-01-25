@@ -1,0 +1,40 @@
+<h2>Players</h2>
+<p-accordion [multiple]="true">
+  <p-accordionTab *ngFor="let player of playersList">
+    <p-header>
+      {{ player.name }} | Total Words: 10 | Total Score: {{ player.totalScore }}
+      <!-- <div class="row">
+        <div class="col-md-7">{{ player.name }}</div> <div class="col-md-3">Total Words</div>
+        <div class="col-md-2">Total Score</div>
+      </div> -->
+    </p-header>
+    <table class="table">
+      <thead class="thead-light">
+        <tr> <th scope="col">Word</th> <th scope="col">Score</th> <th scope="col"></th> </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let word of player.wordsList">
+          <td>{{ word.word }}</td> <td>{{ word.score }}</td>
+          <td><i class="pi pi-times" (click)="handleRemoveWord(word, player.id)"></i></td>
+        </tr>
+      </tbody>
+    </table>
+  </p-accordionTab>
+</p-accordion>
+
+<!-- <p-accordion [multiple]="true">
+  <p-accordionTab *ngFor="let player of playersList" header="{{ player.name }}">
+    <ng-template pTemplate="content">
+      <p-table *ngFor="let player of playersList">
+        <ng-template pTemplate="header">
+          <tr> <th>Word</th> <th>Score</th> <th></th> </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+          <tr *ngFor="let word of player.wordsList">
+            <td>{{ word.word }}</td> <td>{{ word.score }}</td> <td><i class="pi pi-times"></i></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </ng-template>
+  </p-accordionTab>
+</p-accordion> -->

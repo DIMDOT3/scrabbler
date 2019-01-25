@@ -1,19 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container main">
   <div class="jumbotron">
-    <h1 class="display-4">Scrabbler</h1>
-    <p class="lead text-center">A Scrabble score tracker.</p>
+    <h1 class="display-4">Scrabbler</h1> <p class="lead text-center">A Scrabble score tracker.</p>
   </div>
   <div class="row">
     <div class="col-md-4">
-      <app-form (wordSubmitted)="onWordSubmitted($event)"></app-form>
+      <!-- <app-form (wordSubmitted)="onWordSubmitted($event)"></app-form> -->
+      <app-form-wrapper (submitPlayer)="addPlayer($event)"></app-form-wrapper>
     </div>
     <div class="col-md-8">
-      <app-words-list
+      <!-- <app-words-list
         [wordsList]="wordsList"
         [score]="score"
         (removeWord)="onWordRemoved($event)"
-      ></app-words-list>
+      ></app-words-list> -->
+      <app-players-list [playersList]="players" (removeWord)="onWordRemoved($event)"></app-players-list>
     </div>
   </div>
   <app-confirm-modal></app-confirm-modal>

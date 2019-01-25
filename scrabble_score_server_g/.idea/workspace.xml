@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d75f8e04-b55c-43cb-b6eb-418f0f97a083" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../scrabble-score-client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scrabble-score-client/src/app/word.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../scrabble-score-client/src/app/word.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +52,7 @@
     <session id="-468785138">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.opened" value="2" />
@@ -113,9 +111,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/scrabble/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -245,12 +245,12 @@
       <workItem from="1546730341729" duration="859000" />
       <workItem from="1546989288588" duration="2052000" />
       <workItem from="1547765496534" duration="903000" />
-      <workItem from="1548100137296" duration="1360000" />
+      <workItem from="1548100137296" duration="1613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5667000" />
+    <option name="totallyTimeSpent" value="5920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="947" extended-state="0" />
@@ -331,9 +331,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/scrabble/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
           </folding>
         </state>
       </provider>
