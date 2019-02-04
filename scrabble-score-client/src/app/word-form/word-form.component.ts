@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Player } from '../player';
 
 @Component({
   selector: 'app-word-form',
@@ -6,15 +7,24 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./word-form.component.css'],
 })
 export class WordFormComponent implements OnInit {
-  @Output() wordSubmitted = new EventEmitter<string>();
-  word = '';
+  @Input() players: Player[];
+  @Output() submittingWord = new EventEmitter<Object>();
+  word: string;
+  selectedPlayerId: Player;
 
   constructor() {}
 
   ngOnInit() {}
 
+  handleChange(player) {
+    this.selectedPlayerId = player.target.value;
+  }
   onSubmit() {
-    this.wordSubmitted.emit(this.word);
+    const submittedWord = {
+      word: this.word,
+      playerId: Number(this.selectedPlayerId),
+    };
+    this.submittingWord.emit(submittedWord);
     this.word = '';
   }
 }

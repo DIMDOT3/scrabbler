@@ -14,5 +14,6 @@ export class PlayerFormComponent implements OnInit {
 
   onSubmit() {
     this.submittingPlayer.emit(this.player);
+    this.player = '';
   }
 }

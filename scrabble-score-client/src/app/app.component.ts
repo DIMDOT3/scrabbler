@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Injectable } from '@angular/core';
+import { Component, Injectable, SimpleChanges } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 
 import { Player } from './player';
 import { Word } from './word';
 import { playersListSeed } from './seed';
-import { addPlayer } from '@angular/core/src/render3/players';
+import { WordsListComponent } from './words-list/words-list.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ import { addPlayer } from '@angular/core/src/render3/players';
 })
 export class AppComponent {
   title = 'Scrabbler';
-  wordsList: Word[] = [];
+  // wordsList: Word[] = [];
   players: Player[] = [];
   apiUrl = 'http://localhost:8080/word';
   score = 0;
@@ -26,35 +26,51 @@ export class AppComponent {
 
   ngOnInit() {}
 
-  onWordSubmitted(word: string) {
-    if (word) {
-      this.http.get(`${this.apiUrl}?word=${word}`).subscribe((res: Word) => {
-        this.wordsList.push(res);
-        this.score = this.getTotalScore();
-      });
-    } else {
-      throw new Error('you must provide a word!');
-    }
-  }
+  // onWordSubmitted(word: string) {
+  //   if (word) {
+  //     this.http.get(`${this.apiUrl}?word=${word}`).subscribe((res: Word) => {
+  //       this.wordsList.push(res);
+  //       this.score = this.getTotalScore();
+  //     });
+  //   } else {
+  //     throw new Error('you must provide a word!');
+  //   }
+  // }
 
   getTotalScore() {
     return this.wordsList.reduce((acc, nextVal) => acc + nextVal.score, 0);
   }
 
-  onWordRemoved(deletedWordFromPlayer: Object) {
+  removeWord(deletedWordFromPlayer: Object) {
+    console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        // this.players = this.players.map(player => player.id === deletedWordFromPlayer.playerId)
-        const currentPlayer = this.players.filter(player => player.id === deletedWordFromPlayer.playerId);
-        console.log(currentPlayer);
-        // this.wordsList = this.wordsList.filter(word => word.id !== deletedWordFromPlayer.id);
-        // this.score = this.getTotalScore();
+        // const currentPlayer = this.players.filter(player => player.id === deletedWordFromPlayer.playerId);
       },
     });
+  }
 
-    addPlayer(playerName) {
+  addPlayer(playerName: string) {
+    const newPlayer = new Player(playerName);
+    this.players.push(newPlayer);
+  }
 
+  addWord(word: Object) {
+    // console.log(word);
+    // console.log(word.word);
+    // const currentPlayer = this.players.filter(player => player.id === word.playerId);
+    // currentPlayer[0].wordsList.push(word.word);
+    // console.log(this.players);
+    if (word) {
+      this.http.get(`${this.apiUrl}?word=${word.word}`).subscribe((res: Word) => {
+        const currentPlayer = this.players.filter(player => player.id === word.playerId);
+        currentPlayer[0].wordsList.push(res);
+        currentPlayer[0].totalScore += res.score;
+      });
+    } else {
+      throw new Error('you must provide a word!');
     }
+    console.log(this.players);
   }
 }

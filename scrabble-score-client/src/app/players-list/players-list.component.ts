@@ -12,14 +12,10 @@ export class PlayersListComponent implements OnInit {
   @Output() removeWord = new EventEmitter<Object>();
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.playersList);
-    // this.getPlayerScores();
-  }
+  ngOnInit() {}
 
   handleRemoveWord(word: Word, playerId: number) {
     const wordToRemove = { word, playerId };
-    console.log(wordToRemove);
     this.removeWord.emit(wordToRemove);
   }
 }

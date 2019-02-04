@@ -10,6 +10,7 @@ import { ToastModule } from 'primeng/toast';
 import { AccordionModule } from 'primeng/accordion';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ import { PlayerFormComponent } from './player-form/player-form.component';
     AccordionModule,
     TableModule,
     TabViewModule,
+    DropdownModule,
   ],
   providers: [ConfirmationService],
   bootstrap: [AppComponent],

@@ -2,39 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79d9341f-605a-4281-bdc5-cd948185a51d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble-score-client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble-score-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble-score-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/form-wrapper/form-wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/form-wrapper/form-wrapper.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/form-wrapper/form-wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/form-wrapper/form-wrapper.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/player-form/player-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/player-form/player-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/player.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/players-list/players-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/players-list/players-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/word-form/word-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/word-form/word-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble-score-client/src/app/word-form/word-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble-score-client/src/app/word-form/word-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/classes/java/main/scrabble/ScrabbleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/classes/java/main/scrabble/ScrabbleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/libs/gs-rest-service-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/libs/gs-rest-service-0.1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/classes/scrabble.ApplicationTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/classes/scrabble.ApplicationTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/classes/scrabble.SmokeTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/classes/scrabble.SmokeTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/packages/scrabble.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/reports/tests/test/packages/scrabble.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/TEST-scrabble.ApplicationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/TEST-scrabble.ApplicationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/TEST-scrabble.SmokeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/TEST-scrabble.SmokeTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/ScrabbleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/ScrabbleController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,25 +29,28 @@
         <counts>
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="1" />
-          <entry key="gradlew" value="1" />
-          <entry key="java" value="8" />
+          <entry key="gitignore" value="1" />
+          <entry key="gradle" value="4" />
+          <entry key="gradlew" value="2" />
+          <entry key="java" value="9" />
           <entry key="properties" value="1" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="8" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Groovy" value="4" />
+          <entry key="JAVA" value="9" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="1" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -102,16 +86,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/ScrabbleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="40">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server-g/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server-g/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server-g/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -193,6 +193,7 @@
         <option value="$PROJECT_DIR$/scrabble_score_server_g/src/test/java/scrabble/SmokeTest.java" />
         <option value="$PROJECT_DIR$/scrabble_score_server_g/build.gradle" />
         <option value="$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/ScrabbleController.java" />
+        <option value="$PROJECT_DIR$/scrabbler-server-g/build.gradle" />
       </list>
     </option>
   </component>
@@ -223,7 +224,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,11 +263,67 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scrabble_score" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scrabble_score" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler-server-g" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
+              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,17 +360,18 @@
       <workItem from="1547009853238" duration="9768000" />
       <workItem from="1547140780420" duration="2384000" />
       <workItem from="1547219054539" duration="703000" />
+      <workItem from="1549288450531" duration="513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12855000" />
+    <option name="totallyTimeSpent" value="13368000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22310969" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22588523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -329,7 +387,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27821782" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27755103" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -362,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="23" selection-start-line="7" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -378,17 +429,6 @@
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -413,6 +453,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server-m/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server-m/src/main/java/com/scrabbler/scrabbler/ScrabblerApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/Scrabble.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -425,13 +482,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/src/main/java/scrabble/ScrabbleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="40">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabble_score_server_g/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="36" column="1" lean-forward="true" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server-g/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server-g/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server-g/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

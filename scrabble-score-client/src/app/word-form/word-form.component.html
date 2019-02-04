@@ -13,6 +13,17 @@
           required
         />
       </div>
+      <div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Player</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" (change)="handleChange($event)" required>
+            <option selected>Choose a Player...</option>
+            <option *ngFor="let player of players" value="{{ player.id }}">{{ player.name }}</option>
+          </select>
+        </div>
+      </div>
       <button type="submit" class="btn btn-info">Submit</button>
     </form>
   </div>
