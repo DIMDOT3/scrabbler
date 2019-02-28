@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Player } from '../player';
+import {PlayerWord} from "../playerWord";
 
 @Component({
   selector: 'app-word-form',
@@ -20,10 +21,11 @@ export class WordFormComponent implements OnInit {
     this.selectedPlayerId = player.target.value;
   }
   onSubmit() {
-    const submittedWord = {
-      word: this.word,
-      playerId: Number(this.selectedPlayerId),
-    };
+    const submittedWord = new PlayerWord(Number(this.selectedPlayerId), this.word);
+    // const submittedWord = {
+    //   word: this.word,
+    //   playerId: Number(this.selectedPlayerId),
+    // };
     this.submittingWord.emit(submittedWord);
     this.word = '';
   }

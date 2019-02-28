@@ -6,6 +6,7 @@ import { Player } from './player';
 import { Word } from './word';
 import { playersListSeed } from './seed';
 import { WordsListComponent } from './words-list/words-list.component';
+import {PlayerWord} from "./playerWord";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ import { WordsListComponent } from './words-list/words-list.component';
 })
 export class AppComponent {
   title = 'Scrabbler';
-  // wordsList: Word[] = [];
+  wordsList: Word[] = [];
   players: Player[] = [];
   apiUrl = 'http://localhost:8080/word';
   score = 0;
@@ -44,7 +45,7 @@ export class AppComponent {
   removeWord(deletedWordFromPlayer: Object) {
     console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
-      message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
+      message: `Are you sure that you want to remove "${deletedWordFromPlayer["word"]}"?`,
       accept: () => {
         // const currentPlayer = this.players.filter(player => player.id === deletedWordFromPlayer.playerId);
       },
@@ -56,15 +57,15 @@ export class AppComponent {
     this.players.push(newPlayer);
   }
 
-  addWord(word: Object) {
+  addWord(playerWord: PlayerWord) {
     // console.log(word);
     // console.log(word.word);
     // const currentPlayer = this.players.filter(player => player.id === word.playerId);
     // currentPlayer[0].wordsList.push(word.word);
     // console.log(this.players);
-    if (word) {
-      this.http.get(`${this.apiUrl}?word=${word.word}`).subscribe((res: Word) => {
-        const currentPlayer = this.players.filter(player => player.id === word.playerId);
+    if (playerWord) {
+      this.http.get(`${this.apiUrl}?word=${playerWord.word}`).subscribe((res: Word) => {
+        const currentPlayer = this.players.filter(player => player.id === playerWord.playerId);
         currentPlayer[0].wordsList.push(res);
         currentPlayer[0].totalScore += res.score;
       });

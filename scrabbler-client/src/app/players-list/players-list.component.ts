@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player';
 import { Word } from '../word';
+import {PlayerWord} from "../playerWord";
 
 @Component({
   selector: 'app-players-list',
