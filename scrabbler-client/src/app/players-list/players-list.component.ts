@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player';
 import { Word } from '../word';
-import {PlayerWord} from "../playerWord";
+import { PlayerWord } from '../playerWord';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-players-list',
@@ -9,7 +10,7 @@ import {PlayerWord} from "../playerWord";
   styleUrls: ['./players-list.component.css'],
 })
 export class PlayersListComponent implements OnInit {
-  @Input() playersList: Player[];
+  @Input() playersList$: Player[];
   @Output() removeWord = new EventEmitter<Object>();
   constructor() {}
 

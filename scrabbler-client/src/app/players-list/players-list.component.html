@@ -1,6 +1,6 @@
 <h2>Players</h2>
 <p-accordion [multiple]="true">
-  <p-accordionTab *ngFor="let player of playersList">
+  <p-accordionTab *ngFor="let player of (playersList$ | async)">
     <p-header>
       {{ player.name }} | Total Words: 10 | Total Score: {{ player.totalScore }}
       <!-- <div class="row">

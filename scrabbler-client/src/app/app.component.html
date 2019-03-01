@@ -17,7 +17,7 @@
         [score]="score"
         (removeWord)="onWordRemoved($event)"
       ></app-words-list> -->
-      <app-players-list [playersList]="players" (removeWord)="removeWord($event)"></app-players-list>
+      <app-players-list [playersList$]="playerslist$" (removeWord)="removeWord($event)"></app-players-list>
     </div>
   </div>
   <app-confirm-modal></app-confirm-modal>
