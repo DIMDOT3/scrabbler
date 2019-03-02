@@ -4,10 +4,9 @@
   </div>
   <div class="row">
     <div class="col-md-4">
-      <!-- <app-form (wordSubmitted)="onWordSubmitted($event)"></app-form> -->
       <app-form-wrapper
         (playerSubmitted)="addPlayer($event)"
-        [playersList]="players"
+        [players]="players"
         (wordSubmitted)="addWord($event)"
       ></app-form-wrapper>
     </div>
@@ -17,7 +16,7 @@
         [score]="score"
         (removeWord)="onWordRemoved($event)"
       ></app-words-list> -->
-      <app-players-list [playersList$]="playerslist$" (removeWord)="removeWord($event)"></app-players-list>
+      <app-players-list [players]="players" (removeWord)="removeWord($event)" (deletePlayer)="playerDeleted($event)"></app-players-list>
     </div>
   </div>
   <app-confirm-modal></app-confirm-modal>

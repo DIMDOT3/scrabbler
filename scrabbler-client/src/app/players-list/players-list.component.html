@@ -1,21 +1,22 @@
 <h2>Players</h2>
 <p-accordion [multiple]="true">
-  <p-accordionTab *ngFor="let player of (playersList$ | async)">
+  <p-accordionTab *ngFor="let player of players">
     <p-header>
-      {{ player.name }} | Total Words: 10 | Total Score: {{ player.totalScore }}
-      <!-- <div class="row">
-        <div class="col-md-7">{{ player.name }}</div> <div class="col-md-3">Total Words</div>
-        <div class="col-md-2">Total Score</div>
-      </div> -->
+      {{ player.playerName }} | Total Words: {{player.words.length}} | Total Score: {{ player.totalScore }}
+      <i class="pi pi-times" (click)="handleDeletePlayer(player.playerId)"></i>
+      <!--<div class="row">-->
+        <!--<div class="col-md-6">{{ player.playerName }}</div> <div class="col-md-3">Total Words: {{player.words.length}}</div>-->
+        <!--<div class="col-md-2">Total Score:</div>-->
+      <!--</div>-->
     </p-header>
     <table class="table">
       <thead class="thead-light">
         <tr> <th scope="col">Word</th> <th scope="col">Score</th> <th scope="col"></th> </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let word of player.wordsList">
-          <td>{{ word.word }}</td> <td>{{ word.score }}</td>
-          <td><i class="pi pi-times" (click)="handleRemoveWord(word, player.id)"></i></td>
+        <tr *ngFor="let word of player.words">
+          <td>{{ word.word }}</td> <td>{{ word.scrabblescore }}</td>
+          <td><i class="pi pi-times" (click)="handleRemoveWord(word, player.playerId)"></i></td>
         </tr>
       </tbody>
     </table>

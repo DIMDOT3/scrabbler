@@ -9,7 +9,7 @@ import {PlayerWord} from "../playerWord";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormWrapperComponent implements OnInit {
-  @Input() playersList: Player[];
+  @Input() players: Player[];
   @Output() playerSubmitted = new EventEmitter<Object>();
   @Output() wordSubmitted = new EventEmitter<Object>();
   @Output() removingWord = new EventEmitter<Object>();
