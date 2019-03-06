@@ -8,6 +8,8 @@ import { playersListSeed } from './seed';
 import { WordsListComponent } from './words-list/words-list.component';
 import { PlayerWord } from './playerWord';
 import { apiBaseUrl } from '../../configs';
+import { Observable } from 'rxjs';
+import { WordService } from './services/word.service';
 
 @Component({
   selector: 'app-root',
@@ -25,20 +27,22 @@ export class AppComponent {
   score = 0;
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-  constructor(private http: HttpClient, private confirmationService: ConfirmationService) {}
+  constructor(
+    private http: HttpClient,
+    private confirmationService: ConfirmationService,
+    private wordService: WordService,
+  ) {}
 
   ngOnInit() {
-    this.http.get<Player[]>('http://localhost:8086/scrabbler/players').subscribe(res => this.players.push(...res), err => console.log(err));
+    this.http
+      .get<Player[]>('http://localhost:8086/scrabbler/players')
+      .subscribe(res => this.players.push(...res), err => console.log(err));
   }
-  //
-  // getTotalScore() {
-  //   return this.wordsList.reduce((acc, nextVal) => acc + nextVal.score, 0);
-  // }
 
   removeWord(deletedWordFromPlayer: Object) {
     console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
-      message: `Are you sure that you want to remove "${deletedWordFromPlayer['word']}"?`,
+      message: `Are you sure that you want to remove "${deletedWordFromPlayer['word']['word']}"?`,
       accept: () => {
         // const currentPlayer = this.players.filter(player => player.id === deletedWordFromPlayer.playerId);
       },
@@ -51,19 +55,23 @@ export class AppComponent {
       .subscribe(response => this.players.push(response), err => console.log(err));
   }
 
-  playerDeleted(id: number) {
-    this.http.delete(`http://localhost:8086/scrabbler/players/${id}`);
+  playerDeleted(id: number): void {
+    this.wordService.deletePlayer(id);
+    this.players = this.players.filter(player => player.playerId !== id);
   }
 
   addWord(playerWord: PlayerWord) {
     const id: number = playerWord.playerId;
     const word: string = playerWord.word;
-    this.http.post(`http://localhost:8086/scrabbler/player/${id}/words?word=${word}`, playerWord, {headers: this.headers})
-      .subscribe(response => {
-        console.log(response);
-        // const player = this.players.filter(player => player.id === )
-      }, err => console.log(err)
-    );
+    this.http
+      .post(`http://localhost:8086/scrabbler/player/${id}/words?word=${word}`, playerWord, { headers: this.headers })
+      .subscribe(
+        response => {
+          console.log(response);
+          // const player = this.players.filter(player => player.id === )
+        },
+        err => console.log(err),
+      );
     // const currentPlayer = this.players.filter(player => player.id === word.playerId);
     // currentPlayer[0].wordsList.push(word.word);
     // console.log(this.players);

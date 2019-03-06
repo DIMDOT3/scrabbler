@@ -23,6 +23,7 @@ export class PlayersListComponent implements OnInit {
   }
 
   handleDeletePlayer(playerId: number) {
+    event.stopPropagation();
     this.deletePlayer.emit(playerId);
   }
 }

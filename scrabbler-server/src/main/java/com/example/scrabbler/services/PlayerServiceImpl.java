@@ -41,15 +41,17 @@ public class PlayerServiceImpl implements PlayerService {
     }
 
     @Override
-    public void deletePlayer(int playerId) {
+    public Player deletePlayer(int playerId) {
+        Player player = playerRepository.findById(playerId).get();
         playerRepository.deleteById(playerId);
+        return player;
     }
 
     @Override
     public Player addWordToPlayer(int playerId, String word) {
         Player player = playerRepository.findById(playerId).get();
         Word newWord = wordService.checkIfWordIsValid(word);
-        if(newWord.getScrabblescore() > 0) {
+        if (newWord.getScrabblescore() > 0) {
             List<Word> words = player.getWords();
             words.add(newWord);
             player.setWords(words);
