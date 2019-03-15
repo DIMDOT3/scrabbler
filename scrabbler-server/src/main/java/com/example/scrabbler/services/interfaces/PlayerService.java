@@ -12,7 +12,7 @@ public interface PlayerService {
 
     public Player addPlayer(String word);
 
-    public Player deletePlayer(int playerId);
+    public void deletePlayer(int playerId);
 
     public Player addWordToPlayer(int playerId, String word);
 

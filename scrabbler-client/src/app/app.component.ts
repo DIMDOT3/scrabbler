@@ -44,7 +44,7 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer['word']['word']}"?`,
       accept: () => {
-        // const currentPlayer = this.players.filter(player => player.id === deletedWordFromPlayer.playerId);
+        this.http.delete;
       },
     });
   }
@@ -56,19 +56,31 @@ export class AppComponent {
   }
 
   playerDeleted(id: number): void {
-    this.wordService.deletePlayer(id);
-    this.players = this.players.filter(player => player.playerId !== id);
+    const player = this.players.find(player => player.playerId === id);
+    this.confirmationService.confirm({
+      message: `Are you sure you want to delete ${player.playerName}?`,
+      accept: () => {
+        this.http
+          .delete(`http://localhost:8086/scrabbler/players/${id}`)
+          .subscribe(
+            () => (this.players = this.players.filter(player => player.playerId != id)),
+            err => console.log(err),
+          );
+      },
+    });
   }
 
   addWord(playerWord: PlayerWord) {
     const id: number = playerWord.playerId;
     const word: string = playerWord.word;
     this.http
-      .post(`http://localhost:8086/scrabbler/player/${id}/words?word=${word}`, playerWord, { headers: this.headers })
+      .post<Player>(`http://localhost:8086/scrabbler/players/${id}/words?word=${word}`, playerWord, {
+        headers: this.headers,
+      })
       .subscribe(
         response => {
-          console.log(response);
-          // const player = this.players.filter(player => player.id === )
+          const player = this.players.find(player => player.playerId === response.playerId);
+          player.words = response.words;
         },
         err => console.log(err),
       );
