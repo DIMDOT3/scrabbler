@@ -43,7 +43,8 @@ public class Word {
         this.word = word;
     }
 
-    public Word(String word, int scrabblescore) {
+    public Word(int wordId, String word, int scrabblescore) {
+        this.wordId = wordId;
         this.word = word;
         this.scrabblescore = scrabblescore;
     }

@@ -42,9 +42,16 @@ export class AppComponent {
   removeWord(deletedWordFromPlayer: Object) {
     console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
-      message: `Are you sure that you want to remove "${deletedWordFromPlayer['word']['word']}"?`,
+      message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete;
+        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
+          () => {
+            let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
+            player.words.filter(word => word.id != deletedWordFromPlayer.word.wordId);
+            console.log(player);
+          },
+          err => console.log(err),
+        );
       },
     });
   }
@@ -84,19 +91,5 @@ export class AppComponent {
         },
         err => console.log(err),
       );
-    // const currentPlayer = this.players.filter(player => player.id === word.playerId);
-    // currentPlayer[0].wordsList.push(word.word);
-    // console.log(this.players);
-    // if (playerWord) {
-    //   this.http
-    //     .get(`${apiBaseUrl}/players/${playerWord.playerId}/words?word=${playerWord.word}`)
-    //     .subscribe((res: Word) => {
-    //       const currentPlayer = this.players.filter(player => player.id === playerWord.playerId);
-    //       currentPlayer[0].wordsList.push(res);
-    //       currentPlayer[0].totalScore += res.score;
-    //     });
-    // } else {
-    //   throw new Error('you must provide a word!');
-    // }
   }
 }

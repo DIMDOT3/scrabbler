@@ -37,12 +37,17 @@ public class PlayerController {
     }
 
     @DeleteMapping("/players/{id}")
-    public Player deletePlayer(@PathVariable int id) {
-        return playerService.deletePlayer(id);
+    public void deletePlayer(@PathVariable int id) {
+        playerService.deletePlayer(id);
     }
 
     @PostMapping("/players/{id}/words")
     public Player addWordToPlayer(@PathVariable int id, @RequestParam(value = "word") String scrabbleWord) {
         return playerService.addWordToPlayer(id, scrabbleWord);
+    }
+
+    @DeleteMapping("/players/{playerId}/words/{wordId}")
+    public void removeWordFromPlayer(@PathVariable int playerId, @PathVariable int wordId) {
+
     }
 }
