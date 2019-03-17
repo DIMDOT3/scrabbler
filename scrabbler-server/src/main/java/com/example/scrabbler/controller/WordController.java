@@ -33,9 +33,9 @@ public class WordController {
         wordService.deleteWord(id);
     }
 
-    @PutMapping("/words/{id}")
-    public Word updateWord(@PathVariable int id, @RequestBody WordRequestBody wordRequestBody) {
-        String word = wordRequestBody.getWord();
-        return wordService.updateWord(id, word);
-    }
+//    @PutMapping("/words/{id}")
+//    public Word updateWord(@PathVariable int id, @RequestBody WordRequestBody wordRequestBody) {
+//        String word = wordRequestBody.getWord();
+//        return wordService.updateWord(id, word);
+//    }
 }

@@ -15,11 +15,14 @@ public class PlayerController {
     private PlayerService playerService;
 
     @Autowired
-    public PlayerController(PlayerService playerService) {this.playerService = playerService;}
+    public PlayerController(PlayerService playerService) {
+        this.playerService = playerService;
+    }
 
     @GetMapping("/players")
     public List<Player> getPlayers() {
-        return playerService.getPlayers();
+        List<Player> players = playerService.getPlayers();
+        return players;
     }
 
     @PostMapping("/players")
@@ -39,7 +42,12 @@ public class PlayerController {
     }
 
     @PostMapping("/players/{id}/words")
-    public Player addWordToPlayer(@PathVariable int id, @RequestParam(value="word") String scrabbleWord) {
+    public Player addWordToPlayer(@PathVariable int id, @RequestParam(value = "word") String scrabbleWord) {
         return playerService.addWordToPlayer(id, scrabbleWord);
+    }
+
+    @DeleteMapping("/players/{playerId}/words/{wordId}")
+    public void removeWordFromPlayer(@PathVariable int playerId, @PathVariable int wordId) {
+
     }
 }

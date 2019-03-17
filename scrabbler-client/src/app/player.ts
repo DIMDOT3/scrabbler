@@ -1,20 +1,18 @@
 import { Word } from './word';
 
 export class Player {
-  private static _id = 0;
-  id: number;
-  name: string;
-  wordsList: Word[];
-  totalScore: number;
+  // private static _id = 0;
+  playerId: number;
+  playerName: string;
+  words: Word[];
 
-  constructor(name) {
-    this.id = Player.generateId();
-    this.name = name;
-    this.wordsList = [];
-    this.totalScore = 0;
+  constructor(playerId, playerName, words) {
+    this.playerId = playerId;
+    this.playerName = playerName;
+    this.words = words;
   }
 
-  static generateId() {
-    return this._id++;
-  }
+  // static generateId() {
+  //   return this._id++;
+  // }
 }

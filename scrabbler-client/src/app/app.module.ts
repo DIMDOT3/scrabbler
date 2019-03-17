@@ -20,6 +20,7 @@ import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 import { PlayersListComponent } from './players-list/players-list.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
 import { PlayerFormComponent } from './player-form/player-form.component';
+import { WordService } from './services/word.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { PlayerFormComponent } from './player-form/player-form.component';
     TabViewModule,
     DropdownModule,
   ],
-  providers: [ConfirmationService],
+  providers: [ConfirmationService, WordService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

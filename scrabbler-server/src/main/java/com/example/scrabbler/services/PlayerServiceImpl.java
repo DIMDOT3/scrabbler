@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class PlayerServiceImpl implements PlayerService {
@@ -18,13 +19,14 @@ public class PlayerServiceImpl implements PlayerService {
 
     private WordService wordService;
 
-    public PlayerServiceImpl(WordService wordService) {
+    public PlayerServiceImpl(WordService wordService, PlayerRepository playerRepository) {
         this.wordService = wordService;
+        this.playerRepository = playerRepository;
     }
 
     @Override
     public Player getPlayer(int playerId) {
-        return playerRepository.findById(playerId).get();
+        return playerRepository.findById(playerId).orElseThrow(() -> new NoSuchElementException());
     }
 
     @Override
@@ -47,9 +49,9 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Player addWordToPlayer(int playerId, String word) {
-        Player player = playerRepository.findById(playerId).get();
+        Player player = playerRepository.findById(playerId).orElseThrow(() -> new NoSuchElementException());
         Word newWord = wordService.checkIfWordIsValid(word);
-        if(newWord.getScrabblescore() > 0) {
+        if (newWord.getScrabblescore() > 0) {
             List<Word> words = player.getWords();
             words.add(newWord);
             player.setWords(words);

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/scrabble_score.iml" filepath="$PROJECT_DIR$/.idea/scrabble_score.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrabbler-server/scrabbler.iml" filepath="$PROJECT_DIR$/scrabbler-server/scrabbler.iml" />
     </modules>
   </component>
 </project>

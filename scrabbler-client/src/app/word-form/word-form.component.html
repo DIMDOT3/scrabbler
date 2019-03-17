@@ -20,7 +20,7 @@
           </div>
           <select class="custom-select" id="inputGroupSelect01" (change)="handleChange($event)" required>
             <option selected>Choose a Player...</option>
-            <option *ngFor="let player of players" value="{{ player.id }}">{{ player.name }}</option>
+            <option *ngFor="let player of players" value="{{ player.playerId }}">{{ player.playerName }}</option>
           </select>
         </div>
       </div>
