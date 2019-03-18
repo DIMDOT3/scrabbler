@@ -5,10 +5,8 @@ import { ConfirmationService } from 'primeng/api';
 import { Player } from './player';
 import { Word } from './word';
 import { playersListSeed } from './seed';
-import { WordsListComponent } from './words-list/words-list.component';
 import { PlayerWord } from './playerWord';
 import { apiBaseUrl } from '../../configs';
-import { Observable } from 'rxjs';
 import { WordService } from './services/word.service';
 
 @Component({
