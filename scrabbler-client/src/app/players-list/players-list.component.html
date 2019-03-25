@@ -3,16 +3,16 @@
   <p-accordionTab *ngFor="let player of players">
     <p-header>
       {{ player.playerName }} | Total Words: {{ player.words.length }} | Total Score: {{ player.totalScore }}
-      <i class="pi pi-times" (click)="handleDeletePlayer(player.playerId)"></i>
+      <i class="pi pi-times player-delete-icon-test" (click)="handleDeletePlayer(player.playerId, $event)"></i>
     </p-header>
     <table class="table">
       <thead class="thead-light">
         <tr> <th scope="col">Word</th> <th scope="col">Score</th> <th scope="col"></th> </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let word of player.words">
-          <td>{{ word.word }}</td> <td>{{ word.scrabblescore }}</td>
-          <td><i class="pi pi-times" (click)="handleRemoveWord(word, player.playerId)"></i></td>
+        <tr *ngFor="let word of player.words" class="word-rows-test">
+          <td class="word-test">{{ word.word }}</td> <td class="score-test">{{ word.scrabblescore }}</td>
+          <td><i class="pi pi-times delete-word-icon-test" (click)="handleRemoveWord(word, player.playerId)"></i></td>
         </tr>
       </tbody>
     </table>

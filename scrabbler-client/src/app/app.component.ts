@@ -5,11 +5,10 @@ import { ConfirmationService } from 'primeng/api';
 import { Player } from './player';
 import { Word } from './word';
 import { playersListSeed } from './seed';
-import { WordsListComponent } from './words-list/words-list.component';
-import { PlayerWord } from './playerWord';
 import { apiBaseUrl } from '../../configs';
-import { Observable } from 'rxjs';
 import { WordService } from './services/word.service';
+import { WordToDelete } from './interfaces/wordToDelete';
+import { WordToAdd } from './interfaces/wordToAdd';
 
 @Component({
   selector: 'app-root',
@@ -39,15 +38,15 @@ export class AppComponent {
       .subscribe(res => this.players.push(...res), err => console.log(err));
   }
 
-  removeWord(deletedWordFromPlayer: Object) {
+  removeWord(deletedWordFromPlayer: WordToDelete) {
     console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
+        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.id}`).subscribe(
           () => {
             let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
-            player.words.filter(word => word.id != deletedWordFromPlayer.word.wordId);
+            player.words.filter(word => word.id != deletedWordFromPlayer.word.id);
             console.log(player);
           },
           err => console.log(err),
@@ -77,7 +76,7 @@ export class AppComponent {
     });
   }
 
-  addWord(playerWord: PlayerWord) {
+  addWord(playerWord: WordToAdd) {
     const id: number = playerWord.playerId;
     const word: string = playerWord.word;
     this.http
