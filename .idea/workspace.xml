@@ -3,23 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="79d9341f-605a-4281-bdc5-cd948185a51d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/confirm-modal/confirm-modal.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/confirm-modal/confirm-modal.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/playerWord.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/words-list/words-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/words-list/words-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/words-list/words-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/words-list/words-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/scrabbler-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,6 +36,19 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="127" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,11 +126,10 @@
       <path value="$PROJECT_DIR$/scrabbler-client/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="721" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,7 +139,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -317,6 +323,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -541,9 +548,10 @@
     <option name="totallyTimeSpent" value="31596000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="721" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="721" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.25444266" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.2584814" />
       <window_info id="Structure" order="1" sideWeight="0.50547045" side_tool="true" weight="0.25040388" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -552,16 +560,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36925516" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3688394" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3977813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.27575278" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27503973" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3296355" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3290938" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32871974" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49748743" weight="0.24959612" />
@@ -722,13 +730,6 @@
     <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/confirm-modal/confirm-modal.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="62" column="3" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/services/word.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -851,6 +852,13 @@
             <element signature="e#1147#1148#0" expanded="true" />
             <element signature="e#1283#1284#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
         </state>
       </provider>
     </entry>

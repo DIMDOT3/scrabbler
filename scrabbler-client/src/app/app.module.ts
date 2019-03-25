@@ -15,7 +15,6 @@ import { DropdownModule } from 'primeng/dropdown';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WordFormComponent } from './word-form/word-form.component';
-import { WordsListComponent } from './words-list/words-list.component';
 import { ConfirmModalComponent } from './confirm-modal/confirm-modal.component';
 import { PlayersListComponent } from './players-list/players-list.component';
 import { FormWrapperComponent } from './form-wrapper/form-wrapper.component';
@@ -26,7 +25,6 @@ import { WordService } from './services/word.service';
   declarations: [
     AppComponent,
     WordFormComponent,
-    WordsListComponent,
     ConfirmModalComponent,
     PlayersListComponent,
     FormWrapperComponent,
