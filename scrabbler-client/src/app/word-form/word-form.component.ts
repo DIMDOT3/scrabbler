@@ -21,11 +21,7 @@ export class WordFormComponent implements OnInit {
     this.selectedPlayerId = player.target.value;
   }
   onSubmit() {
-    const submittedWord: WordToAdd = { playerId: this.selectedPlayerId, word: this.word };
-    // const submittedWord = {
-    //   word: this.word,
-    //   playerId: Number(this.selectedPlayerId),
-    // };
+    const submittedWord: WordToAdd = { playerId: Number(this.selectedPlayerId), word: this.word };
     this.submittingWord.emit(submittedWord);
     this.word = '';
   }

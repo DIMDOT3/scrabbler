@@ -3,16 +3,17 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PlayersListComponent } from './players-list.component';
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { Player } from '../player';
 
 describe('PlayersListComponent', () => {
   let component: PlayersListComponent;
   let fixture: ComponentFixture<PlayersListComponent>;
-  const player1 = {
+  const player1: Player = {
     playerId: 1,
     playerName: 'player1',
     words: [{ id: 1, word: 'hello', scrabblescore: 1 }, { id: 2, word: 'world', scrabblescore: 2 }],
   };
-  const player2 = {
+  const player2: Player = {
     playerId: 2,
     playerName: 'player2',
     words: [{ id: 3, word: 'green', scrabblescore: 3 }],

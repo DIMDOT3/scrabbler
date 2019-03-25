@@ -3,18 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="79d9341f-605a-4281-bdc5-cd948185a51d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/form-wrapper/form-wrapper.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/player-form/player-form.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/playerWord.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/players-list/players-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word-form/word-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scrabbler-client/src/app/word.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-client/src/app/word.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/scrabbler-server/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,12 +35,43 @@
     <option name="myElementSize" value="127" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-39">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/WordRequestBody.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/PlayerRequestBody.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <element signature="e#324#325#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +118,6 @@
         <option value="$PROJECT_DIR$/scrabbler-client/src/app/services/word.service.ts" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/services/interfaces/PlayerService.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/PlayerRequestBody.java" />
-        <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/controller/PlayerController.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/test/java/com/example/scrabbler/controller/PlayerControllerTest.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/test/java/com/example/scrabbler/controller/WordController.java" />
@@ -98,6 +125,7 @@
         <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/controller/WordController.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/services/PlayerServiceImpl.java" />
         <option value="$PROJECT_DIR$/scrabbler-server/src/test/java/com/example/scrabbler/services/PlayerServiceTest.java" />
+        <option value="$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java" />
       </list>
     </option>
   </component>
@@ -145,32 +173,6 @@
             <path>
               <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
               <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
-              <item name="scrabbler-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
-              <item name="scrabbler-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
-              <item name="scrabbler-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="scrabbler" type="462c0819:PsiDirectoryNode" />
-              <item name="scrabbler-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scrabbler" type="b2602c69:ProjectViewProjectNode" />
@@ -551,7 +553,7 @@
     <frame x="0" y="23" width="1280" height="721" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.2584814" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.2625202" />
       <window_info id="Structure" order="1" sideWeight="0.50547045" side_tool="true" weight="0.25040388" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -560,14 +562,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3688394" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3672496" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3977813" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.27503973" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.27344993" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3290938" />
       <window_info anchor="bottom" id="TypeScript" order="12" weight="0.32871974" />
@@ -603,13 +605,7 @@
     <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/seed.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/playerWord.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/playerWord.ts" />
     <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/word.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -754,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scrabbler-server/src/test/java/com/example/scrabbler/controller/WordController.java" />
     <entry file="file://$PROJECT_DIR$/scrabbler-server/src/test/java/com/example/scrabbler/controller/PlayerControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -777,24 +766,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="35" selection-start-line="35" selection-start-column="2" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/PlayerRequestBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/WordRequestBody.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -857,8 +828,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrabbler-client/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        <state relative-caret-position="1065">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/repositories/models/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/WordRequestBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrabbler-server/src/main/java/com/example/scrabbler/domains/PlayerRequestBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

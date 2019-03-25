@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output, ChangeDetectionStrategy } from '@angular/core';
 import { Player } from '../player';
 import { WordToAdd } from '../interfaces/wordToAdd';
+import { WordToDelete } from '../interfaces/wordToDelete';
 
 @Component({
   selector: 'app-form-wrapper',
@@ -17,12 +18,7 @@ export class FormWrapperComponent implements OnInit {
 
   ngOnInit() {}
 
-  wordToRemove(wordToRemove: Object) {
-    console.log(wordToRemove);
-  }
-
   submitWord(playerWord: WordToAdd) {
-    console.log(playerWord);
     this.wordSubmitted.emit(playerWord);
   }
 

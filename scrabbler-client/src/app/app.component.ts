@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, Injectable, SimpleChanges } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 
 import { Player } from './player';
@@ -20,7 +20,6 @@ import { WordToAdd } from './interfaces/wordToAdd';
 })
 export class AppComponent {
   title = 'Scrabbler';
-  wordsList: Word[] = [];
   players: Player[] = [];
   // apiUrl = 'http://localhost:8080/word';
   score = 0;
@@ -36,6 +35,7 @@ export class AppComponent {
     this.http
       .get<Player[]>('http://localhost:8086/scrabbler/players')
       .subscribe(res => this.players.push(...res), err => console.log(err));
+    console.log(this.players);
   }
 
   removeWord(deletedWordFromPlayer: WordToDelete) {
@@ -43,11 +43,12 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.id}`).subscribe(
+        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
           () => {
             let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
-            player.words.filter(word => word.id != deletedWordFromPlayer.word.id);
             console.log(player);
+            player.words.filter(word => word.id != deletedWordFromPlayer.word.id);
+            this.players = [...this.players, player];
           },
           err => console.log(err),
         );
