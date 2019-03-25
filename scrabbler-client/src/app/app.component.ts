@@ -43,7 +43,7 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
+        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.id}`).subscribe(
           () => {
             let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
             console.log(player);
