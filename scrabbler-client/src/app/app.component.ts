@@ -3,10 +3,7 @@ import { Component, Injectable } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 
 import { Player } from './player';
-import { Word } from './word';
-import { playersListSeed } from './seed';
-import { apiBaseUrl } from '../../configs';
-import { WordService } from './services/word.service';
+import { PlayerService } from './services/player.service';
 import { WordToDelete } from './interfaces/wordToDelete';
 import { WordToAdd } from './interfaces/wordToAdd';
 
@@ -21,20 +18,17 @@ import { WordToAdd } from './interfaces/wordToAdd';
 export class AppComponent {
   title = 'Scrabbler';
   players: Player[] = [];
-  // apiUrl = 'http://localhost:8080/word';
   score = 0;
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
     private http: HttpClient,
     private confirmationService: ConfirmationService,
-    private wordService: WordService,
+    private playerService: PlayerService,
   ) {}
 
   ngOnInit() {
-    this.http
-      .get<Player[]>('http://localhost:8086/scrabbler/players')
-      .subscribe(res => this.players.push(...res), err => console.log(err));
+    this.playerService.getPlayers().subscribe(res => this.players.push(...res), err => console.log(err));
     console.log(this.players);
   }
 
@@ -43,12 +37,11 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.id}`).subscribe(
+        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
           () => {
-            let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
+            const player = this.players.find(p => p.playerId === deletedWordFromPlayer.playerId);
             console.log(player);
-            player.words.filter(word => word.id != deletedWordFromPlayer.word.id);
-            this.players = [...this.players, player];
+            player.words.filter(word => word.id !== deletedWordFromPlayer.word.id);
           },
           err => console.log(err),
         );
@@ -57,8 +50,8 @@ export class AppComponent {
   }
 
   addPlayer(playerName: string) {
-    this.http
-      .post<Player>('http://localhost:8086/scrabbler/players', { name: playerName }, { headers: this.headers })
+    this.playerService
+      .addPlayer(playerName)
       .subscribe(response => this.players.push(response), err => console.log(err));
   }
 
@@ -67,8 +60,8 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure you want to delete ${player.playerName}?`,
       accept: () => {
-        this.http
-          .delete(`http://localhost:8086/scrabbler/players/${id}`)
+        this.playerService
+          .deletePlayer(id)
           .subscribe(
             () => (this.players = this.players.filter(player => player.playerId != id)),
             err => console.log(err),
@@ -80,16 +73,12 @@ export class AppComponent {
   addWord(playerWord: WordToAdd) {
     const id: number = playerWord.playerId;
     const word: string = playerWord.word;
-    this.http
-      .post<Player>(`http://localhost:8086/scrabbler/players/${id}/words?word=${word}`, playerWord, {
-        headers: this.headers,
-      })
-      .subscribe(
-        response => {
-          const player = this.players.find(player => player.playerId === response.playerId);
-          player.words = response.words;
-        },
-        err => console.log(err),
-      );
+    this.playerService.addWordToPlayer(playerWord).subscribe(
+      response => {
+        const player = this.players.find(player => player.playerId === response.playerId);
+        player.words = response.words;
+      },
+      err => console.log(err),
+    );
   }
 }
