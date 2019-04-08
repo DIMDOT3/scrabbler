@@ -1,8 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Player } from '../player';
 import { Word } from '../word';
-import { PlayerWord } from '../playerWord';
-import { Observable } from 'rxjs';
+import { WordToDelete } from '../interfaces/wordToDelete';
 
 @Component({
   selector: 'app-players-list',
@@ -18,12 +17,13 @@ export class PlayersListComponent implements OnInit {
   ngOnInit() {}
 
   handleRemoveWord(word: Word, playerId: number) {
-    const wordToRemove = { word, playerId };
+    const wordToRemove: WordToDelete = { playerId, word };
     this.removeWord.emit(wordToRemove);
   }
 
-  handleDeletePlayer(playerId: number) {
-    event.stopPropagation();
+  handleDeletePlayer(playerId: number, e: Event) {
+    e.stopPropagation();
+    // console.log(playerId);
     this.deletePlayer.emit(playerId);
   }
 }

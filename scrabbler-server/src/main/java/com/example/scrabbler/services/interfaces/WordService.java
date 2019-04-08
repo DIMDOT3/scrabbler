@@ -1,5 +1,6 @@
 package com.example.scrabbler.services.interfaces;
 
+import com.example.scrabbler.repositories.models.Player;
 import com.example.scrabbler.repositories.models.Word;
 
 import java.util.List;
@@ -14,5 +15,5 @@ public interface WordService {
 
   public Word updateWord(int id, String word);
 
-  public void deleteWord(int id);
+  public Player deleteWord(int playerId, int wordId);
 }

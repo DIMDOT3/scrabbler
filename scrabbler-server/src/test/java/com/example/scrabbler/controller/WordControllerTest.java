@@ -57,8 +57,8 @@ public class WordControllerTest {
         Word word2 = new Word(2, "world", 2);
         List<Word> words = Arrays.asList(word1, word2);
 
-        wordController.deleteWord(2);
+        wordController.deleteWord(2, 2);
 
-        verify(wordService).deleteWord(2);
+        verify(wordService).deleteWord(2, 2);
     }
 }

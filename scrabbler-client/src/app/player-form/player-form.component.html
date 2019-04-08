@@ -2,13 +2,14 @@
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #wordForm="ngForm">
       <div class="form-group">
-        <label for="player-form">Add a Player</label>
+        <label for="player-input">Add a Player</label>
         <input
           type="text"
           class="form-control"
-          id="player-form"
+          id="player-input"
           placeholder="Enter the player's name"
           [(ngModel)]="player"
+          required
           name="player"
           required
         />

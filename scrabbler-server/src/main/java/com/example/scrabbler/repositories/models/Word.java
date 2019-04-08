@@ -3,6 +3,7 @@ package com.example.scrabbler.repositories.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -12,49 +13,50 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity(name = "Words")
 @Table(name = "words")
 @JsonIgnoreProperties(ignoreUnknown = true)
-@XmlRootElement(name="entry")
+@XmlRootElement(name = "entry")
 @XmlAccessorType(XmlAccessType.NONE)
-//public class Word extends AuditModel {
+
 public class Word {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int wordId;
+    @NotNull
+    private int id;
 
     private String word;
 
     private int scrabblescore;
 
-//    @ManyToMany(mappedBy = "words")
-//    private List<Player> players;
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name="player_id", nullable=false)
-//    private Player player;
+    // @ManyToMany(mappedBy = "words")
+    // private List<Player> players;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // @JoinColumn(name="player_id", nullable=false)
+    // private Player player;
 
-
-    public Word() {}
-
-    public Word(int wordId) {
-        this.wordId = wordId;
+    public Word() {
     }
 
-    public Word(int wordId, String word) {
-        this.wordId = wordId;
+    public Word(int id) {
+        this.id = id;
+    }
+
+    public Word(int id, String word) {
+        this.id = id;
         this.word = word;
     }
 
-    public Word(int wordId, String word, int scrabblescore) {
-        this.wordId = wordId;
+    public Word(int id, String word, int scrabblescore) {
+        this.id = id;
         this.word = word;
         this.scrabblescore = scrabblescore;
     }
 
-    public int getWordId() {
-        return wordId;
+    public int getId() {
+        return id;
     }
 
-    public void setWordId(int wordId) {
-        this.wordId = wordId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getWord() {
@@ -72,5 +74,4 @@ public class Word {
     public void setScrabblescore(int scrabblescore) {
         this.scrabblescore = scrabblescore;
     }
-
 }

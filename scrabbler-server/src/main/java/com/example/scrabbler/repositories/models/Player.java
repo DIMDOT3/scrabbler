@@ -3,6 +3,7 @@ package com.example.scrabbler.repositories.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
 public class Player extends AuditModel {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @NotNull
   private int playerId;
   private String playerName;
 

@@ -1,15 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, Injectable, SimpleChanges } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 
 import { Player } from './player';
-import { Word } from './word';
-import { playersListSeed } from './seed';
-import { WordsListComponent } from './words-list/words-list.component';
-import { PlayerWord } from './playerWord';
-import { apiBaseUrl } from '../../configs';
-import { Observable } from 'rxjs';
-import { WordService } from './services/word.service';
+import { PlayerService } from './services/player.service';
+import { WordToDelete } from './interfaces/wordToDelete';
+import { WordToAdd } from './interfaces/wordToAdd';
 
 @Component({
   selector: 'app-root',
@@ -21,45 +17,46 @@ import { WordService } from './services/word.service';
 })
 export class AppComponent {
   title = 'Scrabbler';
-  wordsList: Word[] = [];
   players: Player[] = [];
-  // apiUrl = 'http://localhost:8080/word';
   score = 0;
   headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
     private http: HttpClient,
     private confirmationService: ConfirmationService,
-    private wordService: WordService,
+    private playerService: PlayerService,
   ) {}
 
   ngOnInit() {
-    this.http
-      .get<Player[]>('http://localhost:8086/scrabbler/players')
-      .subscribe(res => this.players.push(...res), err => console.log(err));
+    this.playerService.getPlayers().subscribe(res => this.players.push(...res), err => console.log(err));
   }
 
-  removeWord(deletedWordFromPlayer: Object) {
-    console.log(deletedWordFromPlayer);
+  removeWord(deletedWordFromPlayer: WordToDelete) {
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
-          () => {
-            let player = this.players.find(player => player.playerId === deletedWordFromPlayer.playerId);
-            player.words.filter(word => word.id != deletedWordFromPlayer.word.wordId);
-            console.log(player);
-          },
-          err => console.log(err),
-        );
+        this.http
+          .delete(
+            `http://localhost:8086/scrabbler/players/${deletedWordFromPlayer.playerId}/words/${
+              deletedWordFromPlayer.word.id
+            }`,
+          )
+          .subscribe(
+            (res: Player) => {
+              this.players.map(p => {
+                p.playerId === res.playerId ? (p.words = res.words) : p;
+              });
+            },
+            err => console.log(err),
+          );
       },
     });
   }
 
   addPlayer(playerName: string) {
-    this.http
-      .post<Player>('http://localhost:8086/scrabbler/players', { name: playerName }, { headers: this.headers })
-      .subscribe(response => this.players.push(response), err => console.log(err));
+    this.playerService.addPlayer(playerName).subscribe(res => {
+      (this.players = [...this.players, res]), err => console.log(err);
+    });
   }
 
   playerDeleted(id: number): void {
@@ -67,8 +64,8 @@ export class AppComponent {
     this.confirmationService.confirm({
       message: `Are you sure you want to delete ${player.playerName}?`,
       accept: () => {
-        this.http
-          .delete(`http://localhost:8086/scrabbler/players/${id}`)
+        this.playerService
+          .deletePlayer(id)
           .subscribe(
             () => (this.players = this.players.filter(player => player.playerId != id)),
             err => console.log(err),
@@ -77,19 +74,15 @@ export class AppComponent {
     });
   }
 
-  addWord(playerWord: PlayerWord) {
+  addWord(playerWord: WordToAdd) {
     const id: number = playerWord.playerId;
     const word: string = playerWord.word;
-    this.http
-      .post<Player>(`http://localhost:8086/scrabbler/players/${id}/words?word=${word}`, playerWord, {
-        headers: this.headers,
-      })
-      .subscribe(
-        response => {
-          const player = this.players.find(player => player.playerId === response.playerId);
-          player.words = response.words;
-        },
-        err => console.log(err),
-      );
+    this.playerService.addWordToPlayer(playerWord).subscribe(
+      response => {
+        const player = this.players.find(player => player.playerId === response.playerId);
+        player.words = response.words;
+      },
+      err => console.log(err),
+    );
   }
 }
