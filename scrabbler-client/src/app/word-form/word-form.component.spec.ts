@@ -53,7 +53,7 @@ describe('FormComponent', () => {
     const select = fixture.debugElement.query(By.css('.custom-select')).nativeElement;
     const submitBtn = fixture.debugElement.query(By.css('.btn')).nativeElement;
     const word: WordToAdd = { playerId: 1, word: 'yellow' };
-    spyOn(component.submittingWord, 'emit');
+    spyOn(component.submitWord, 'emit');
 
     input.value = 'yellow';
     input.dispatchEvent(new Event('input'));
@@ -63,7 +63,7 @@ describe('FormComponent', () => {
     submitBtn.click();
     fixture.detectChanges();
 
-    expect(component.submittingWord.emit).toHaveBeenCalledTimes(1);
-    expect(component.submittingWord.emit).toHaveBeenCalledWith(word);
+    expect(component.submitWord.emit).toHaveBeenCalledTimes(1);
+    expect(component.submitWord.emit).toHaveBeenCalledWith(word);
   });
 });
