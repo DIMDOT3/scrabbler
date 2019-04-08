@@ -34,11 +34,11 @@ public class PlayerServiceTest {
         Assert.assertEquals(response, player);
     }
 
-    @Test
-    public void testPlayerService_AddPlayer() {
-        Player player = new Player("john");
-        playerService.addPlayer("john");
-
-        verify(playerRepository).save(player);
-    }
+//    @Test
+//    public void testPlayerService_AddPlayer() {
+//        Player player = new Player("john");
+//        playerService.addPlayer("john");
+//
+//        verify(playerRepository).save(player);
+//    }
 }

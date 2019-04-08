@@ -1,7 +1,9 @@
 package com.example.scrabbler.services;
 
 
+import com.example.scrabbler.repositories.PlayerRepository;
 import com.example.scrabbler.repositories.WordRepository;
+import com.example.scrabbler.repositories.models.Player;
 import com.example.scrabbler.repositories.models.Word;
 import com.example.scrabbler.services.interfaces.WordService;
 import org.slf4j.Logger;
@@ -11,11 +13,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 @Service
 public class WordServiceImpl implements WordService {
 
   private WordRepository wordRepository;
+  private PlayerRepository playerRepository;
 
   private static final Logger log = LoggerFactory.getLogger(Word.class);
 
@@ -23,8 +27,9 @@ public class WordServiceImpl implements WordService {
   RestTemplate restTemplate;
 
   @Autowired
-  public WordServiceImpl(WordRepository wordRepository) {
+  public WordServiceImpl(WordRepository wordRepository, PlayerRepository playerRepository) {
     this.wordRepository = wordRepository;
+    this.playerRepository = playerRepository;
   }
 
    public List<Word> getAllWords() {
@@ -60,7 +65,8 @@ public class WordServiceImpl implements WordService {
   }
 
   @Override
-  public void deleteWord(int id) {
-    wordRepository.deleteById(id);
+  public Player deleteWord(int playerId, int wordId) {
+    wordRepository.deleteById(wordId);
+    return playerRepository.findById(playerId).orElseThrow(NoSuchElementException::new);
   }
 }

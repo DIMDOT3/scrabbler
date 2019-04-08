@@ -7,6 +7,7 @@ import com.example.scrabbler.services.interfaces.PlayerService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -40,10 +41,10 @@ public class PlayerControllerTest {
 
         when(playerService.getPlayers()).thenReturn(players);
 
-        List<Player> response = playerController.getPlayers();
+        ResponseEntity<List<Player>> response = playerController.getPlayers();
 
-        Assert.assertEquals(response.size(), 2);
-        Assert.assertThat(response, hasItems(player1, player2));
+        Assert.assertEquals(response.getBody().size(), 2);
+        Assert.assertThat(response.getBody(), hasItems(player1, player2));
     }
 
     @Test
@@ -53,9 +54,9 @@ public class PlayerControllerTest {
 
         when(playerService.addPlayer("player1")).thenReturn(player);
 
-        Player response = playerController.addPlayer(requestBody);
+        ResponseEntity<Player> response = playerController.addPlayer(requestBody);
 
-        Assert.assertSame(player, response);
+        Assert.assertSame(player, response.getBody());
     }
 
     @Test
@@ -64,9 +65,9 @@ public class PlayerControllerTest {
 
         when(playerService.getPlayer(1)).thenReturn(player);
 
-        Player response = playerController.getPlayer(1);
+        ResponseEntity<Player> response = playerController.getPlayer(1);
 
-        Assert.assertSame(player, response);
+        Assert.assertSame(player, response.getBody());
     }
 
     @Test
@@ -88,8 +89,8 @@ public class PlayerControllerTest {
 
         when(playerService.addWordToPlayer(1, "test")).thenReturn(player);
 
-        Player response = playerController.addWordToPlayer(1, "test");
+        ResponseEntity<Player> response = playerController.addWordToPlayer(1, "test");
 
-        Assert.assertEquals(response.getWords().size(), 1);
+        Assert.assertEquals(response.getBody().getWords().size(), 1);
     }
 }

@@ -4,6 +4,8 @@ import com.example.scrabbler.domains.PlayerRequestBody;
 import com.example.scrabbler.repositories.models.Player;
 import com.example.scrabbler.services.interfaces.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,34 +22,33 @@ public class PlayerController {
     }
 
     @GetMapping("/players")
-    public List<Player> getPlayers() {
+    public ResponseEntity<List<Player>> getPlayers() {
         List<Player> players = playerService.getPlayers();
-        return players;
+        return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
     @PostMapping("/players")
-    public Player addPlayer(@RequestBody(required = false) PlayerRequestBody playerRequestBody) {
-        Player newPlayer = playerService.addPlayer(playerRequestBody.getName());
-        return newPlayer;
+    public ResponseEntity<Player> addPlayer(@RequestBody(required = false) PlayerRequestBody playerRequestBody) {
+        Player player = playerService.addPlayer(playerRequestBody.getName());
+        return new ResponseEntity<>(player, HttpStatus.OK);
     }
 
     @GetMapping("/players/{id}")
-    public Player getPlayer(@PathVariable int id) {
-        return playerService.getPlayer(id);
+    public ResponseEntity<Player> getPlayer(@PathVariable int id) {
+        Player player = playerService.getPlayer(id);
+        return new ResponseEntity<>(player, HttpStatus.OK);
     }
 
     @DeleteMapping("/players/{id}")
-    public void deletePlayer(@PathVariable int id) {
+    public ResponseEntity<List<Player>> deletePlayer(@PathVariable int id) {
         playerService.deletePlayer(id);
+        List<Player> players = playerService.getPlayers();
+        return new ResponseEntity<>(players, HttpStatus.OK);
     }
 
     @PostMapping("/players/{id}/words")
-    public Player addWordToPlayer(@PathVariable int id, @RequestParam(value = "word") String scrabbleWord) {
-        return playerService.addWordToPlayer(id, scrabbleWord);
-    }
-
-    @DeleteMapping("/players/{playerId}/words/{wordId}")
-    public void removeWordFromPlayer(@PathVariable int playerId, @PathVariable int wordId) {
-
+    public ResponseEntity<Player> addWordToPlayer(@PathVariable int id, @RequestParam(value = "word") String scrabbleWord) {
+        Player player = playerService.addWordToPlayer(id, scrabbleWord);
+        return new ResponseEntity<>(player, HttpStatus.OK);
     }
 }

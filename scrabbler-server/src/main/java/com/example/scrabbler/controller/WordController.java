@@ -1,6 +1,7 @@
 package com.example.scrabbler.controller;
 
 import com.example.scrabbler.domains.WordRequestBody;
+import com.example.scrabbler.repositories.models.Player;
 import com.example.scrabbler.repositories.models.Word;
 import com.example.scrabbler.services.interfaces.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/scrabbler")
+@RequestMapping("/scrabbler/players/{playerId}/words")
 @CrossOrigin
 
 public class WordController {
@@ -18,19 +19,20 @@ public class WordController {
     @Autowired
     public WordController(WordService wordService) {this.wordService = wordService;}
 
-    @GetMapping("/words")
+    @GetMapping("/")
     public List<Word> getAllWords() {
        return wordService.getAllWords();
     }
 
-    @GetMapping("/words/{id}")
-    public Word getWord(@PathVariable int id) {
-        return wordService.getWord(id);
+    @GetMapping("/{wordId}")
+    public Word getWord(@PathVariable int wordId) {
+        return wordService.getWord(wordId);
     }
 
-    @DeleteMapping("/words/{id}")
-    public void deleteWord(@PathVariable int id) {
-        wordService.deleteWord(id);
+    @DeleteMapping("/{wordId}")
+    public Player deleteWord(@PathVariable int playerId, @PathVariable int wordId) {
+       Player player = wordService.deleteWord(playerId, wordId);
+       return player;
     }
 
 //    @PutMapping("/words/{id}")

@@ -9,7 +9,7 @@ import { WordToAdd } from '../interfaces/wordToAdd';
 })
 export class WordFormComponent implements OnInit {
   @Input() players: Player[];
-  @Output() submittingWord = new EventEmitter<Object>();
+  @Output() submitWord = new EventEmitter<Object>();
   word: string;
   selectedPlayerId: number;
 
@@ -21,8 +21,8 @@ export class WordFormComponent implements OnInit {
     this.selectedPlayerId = player.target.value;
   }
   onSubmit() {
-    const submittedWord: WordToAdd = { playerId: Number(this.selectedPlayerId), word: this.word };
-    this.submittingWord.emit(submittedWord);
+    const word: WordToAdd = { playerId: Number(this.selectedPlayerId), word: this.word };
+    this.submitWord.emit(word);
     this.word = '';
   }
 }

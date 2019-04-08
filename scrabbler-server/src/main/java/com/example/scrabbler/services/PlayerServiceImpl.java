@@ -49,7 +49,7 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Player addWordToPlayer(int playerId, String word) {
-        Player player = playerRepository.findById(playerId).orElseThrow(() -> new NoSuchElementException());
+        Player player = playerRepository.findById(playerId).orElseThrow(NoSuchElementException::new);
         Word newWord = wordService.checkIfWordIsValid(word);
         if (newWord.getScrabblescore() > 0) {
             List<Word> words = player.getWords();

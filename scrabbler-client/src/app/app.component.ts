@@ -29,30 +29,34 @@ export class AppComponent {
 
   ngOnInit() {
     this.playerService.getPlayers().subscribe(res => this.players.push(...res), err => console.log(err));
-    console.log(this.players);
   }
 
   removeWord(deletedWordFromPlayer: WordToDelete) {
-    console.log(deletedWordFromPlayer);
     this.confirmationService.confirm({
       message: `Are you sure that you want to remove "${deletedWordFromPlayer.word.word}"?`,
       accept: () => {
-        this.http.delete(`http://localhost:8086/scrabbler/words/${deletedWordFromPlayer.word.wordId}`).subscribe(
-          () => {
-            const player = this.players.find(p => p.playerId === deletedWordFromPlayer.playerId);
-            console.log(player);
-            player.words.filter(word => word.id !== deletedWordFromPlayer.word.id);
-          },
-          err => console.log(err),
-        );
+        this.http
+          .delete(
+            `http://localhost:8086/scrabbler/players/${deletedWordFromPlayer.playerId}/words/${
+              deletedWordFromPlayer.word.id
+            }`,
+          )
+          .subscribe(
+            (res: Player) => {
+              this.players.map(p => {
+                p.playerId === res.playerId ? (p.words = res.words) : p;
+              });
+            },
+            err => console.log(err),
+          );
       },
     });
   }
 
   addPlayer(playerName: string) {
-    this.playerService
-      .addPlayer(playerName)
-      .subscribe(response => this.players.push(response), err => console.log(err));
+    this.playerService.addPlayer(playerName).subscribe(res => {
+      (this.players = [...this.players, res]), err => console.log(err);
+    });
   }
 
   playerDeleted(id: number): void {
